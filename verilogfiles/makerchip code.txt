@@ -1,0 +1,71 @@
+\TLV_version 1d: tl-x.org
+\SV
+/* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/  /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/
+
+//Your Verilog/System Verilog Code Starts Here:
+module tb; 
+ 
+	reg CLK; 
+	reg COUNT; 
+   
+	always 
+	begin 
+      
+		CLK = 0; 
+		#2.5; 
+     
+		CLK = 1; 
+      #2.5; 
+	end 
+ 
+endmodule
+
+//Top Module Code Starts here:	
+module FF(CLK, Q, QBAR); 
+ 
+	input CLK; 
+ 
+	output QBAR; 
+	output Q; 
+ 
+	wire CLK; 
+	wire Q; 
+	wire QBAR; 
+	 
+	reg state; 
+	 
+	always @(posedge CLK) 
+	begin 
+		begin 
+			state <= ~state; 
+		end 
+	end 
+	 
+	assign QBAR = ~state; 
+	assign Q = state; 
+ 
+endmodule 
+
+module counter(CLK, COUNT); 
+ 
+	input CLK; 
+	output COUNT; 
+	 
+	wire CLK; 
+	wire COUNT; 
+	 
+	wire C1; 
+	wire Q1; 
+	wire Q2; 
+	 
+	FF TFF1(.CLK(CLK), .Q(Q1), .QBAR(C1)); 
+	FF TFF2(.CLK(C1), .Q(), .QBAR(Q2)); 
+	 
+	assign COUNT = Q2;
+ 
+endmodule 
+
+module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, output logic passed, output logic failed);
+	logic COUNT;		
+   counter counter1(.CLK(clk), .COUNT(COUNT));
+endmodule
