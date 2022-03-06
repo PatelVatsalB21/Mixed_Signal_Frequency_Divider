@@ -21,7 +21,9 @@
 - [References](#references)
 
 ## Abstract
+Frequency Divider is an electronic circuit that divides a given frequency by a factor of n, where n is an integer. Here a divide-by-4 circuit is used which divides the input frequency by 4. The frequency divider is made up of two parts - an astable multivibrator and a divide-by-4 counter. Frequency dividers are an integral part of communication and audio based systems like Frequency Synthesizers, RF devices, Communication.
 
+The Frequency Divider is made up of an astable multivibrator and a divide-by-4 counter. The astable multivibrator generates a clock signal of a specific frequency which is used as an input in the counter. Then the counter produces an output signal of a divide-by-4 frequency.
 
 ## Reference Circuit Diagram
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Reference%20images/Frequency%20Divider%20Schematic.png)
@@ -33,12 +35,19 @@
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/frequency_divider.jpg)
 
 ### Astable Multivibrator
-
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator.jpg)
 
+The Astable Multivibrator is also called a free-running multivibrator. It has two quasi-stable states and no external signal is required to produce the changes in state. The component values are used to decide the time for which circuit remains in each state. Usually, as the astable multivibrator oscillates between two states, is used to produce a square wave. In this circuit, the time period is dependent upon the value of the resistor and capacitor. It also depends upon the upper and lower threshold voltage of the op-amp.
+
+#### Astable Multivibrator Symbol
 <img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
 
-# MOD-4 Counter
+### MOD-4 Counter
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/counter_symbol.png)
+
+A Divide-By-4 counter is a binary divider composed of two D flip flops where an inverted output terminal is connected back to the data terminal in a feedback loop. It is an asynchronous counter, where the first flip-flop is clocked by the external clock pulse and then each successive flip-flop is clocked by the output of the preceding flip-flop. As the signal moves in a ripple pattern, it takes some time at each stage resulting in the lower frequency at the output.
+
+#### MOD-4 Counter Symbol
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/counter_symbol.png)
 
 
