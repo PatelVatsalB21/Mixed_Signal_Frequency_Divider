@@ -13,7 +13,7 @@
 - [Verilog Code](#verilog-code)
 - [Makerchip](#makerchip-1)
 - [Makerchip Plots](#makerchip-plots)
-- [Netlists](#netlists)
+- [Netlist](#netlist)
 - [NgSpice Plots](#ngspice-plots)
 - [Observations](#observations)
 - [Steps to run generate NgVeri Model](#steps-to-run-generate-ngveri-model)
@@ -196,6 +196,8 @@ module tb;
  
 	reg CLK; 
 	reg COUNT; 
+	 
+	counter counter1(.CLK(CLK), .COUNT(COUNT));
    
 	always 
 	begin 
@@ -204,7 +206,7 @@ module tb;
 		#2.5; 
      
 		CLK = 1; 
-      #2.5; 
+      		#2.5; 
 	end 
  
 endmodule
@@ -269,7 +271,7 @@ endmodule
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20All%20Signals.png)
 
 
-## Netlists
+## Netlist
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/netlist.jpg)
 
 ## NgSpice Plots
