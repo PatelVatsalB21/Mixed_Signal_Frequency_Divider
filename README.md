@@ -1,5 +1,7 @@
 # Mixed Signal Frequency Divider
-# Frequency Divider Using Astable Multivibrator and MOD-4 Counter
+This repository presents the design of Frequency Divider Using Astable Multivibrator and MOD-4 Counter as a mixed signal circuit. The Astable Multivibrator is designed as an analog circuit while the MOD-4 Counter is designed as a digital circuit.
+
+## Table of Contents
 - [Abstract](#abstract)
 - [Reference Circuit Diagram](#reference-circuit-diagram)
 - [Reference Waveform](#reference-waveform)
