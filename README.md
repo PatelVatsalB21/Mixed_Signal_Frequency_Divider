@@ -40,7 +40,7 @@ The Frequency Divider is made up of an astable multivibrator and a divide-by-4 c
 The Astable Multivibrator is also called a free-running multivibrator. It has two quasi-stable states and no external signal is required to produce the changes in state. The component values are used to decide the time for which circuit remains in each state. Usually, as the astable multivibrator oscillates between two states, is used to produce a square wave. In this circuit, the time period is dependent upon the value of the resistor and capacitor. It also depends upon the upper and lower threshold voltage of the op-amp.
 
 <details>
-	<summary><h4> Working in Detail </h4></summary>
+	<summary><h3> Working in Detail </h3></summary>
     <br>
 
 In the op-amp multivibrator circuit, the op-amp works as an analogue comparator. An op-amp comparator compares the voltages on its two inputs and gives a positive or negative output depending on whether the input is greater or less than some reference value, VREF.
