@@ -1,0 +1,14 @@
+* Subcircuit astable_multivibrator
+.subckt astable_multivibrator net-_r1-pad2_ 
+* c:\fossee\esim\library\subcircuitlibrary\astable_multivibrator\astable_multivibrator.cir
+.include lm_741.sub
+r1  net-_c1-pad1_ net-_r1-pad2_ 10k
+r3  net-_r3-pad1_ net-_r1-pad2_ 1k
+r4  gnd net-_r3-pad1_ 10k
+c1  net-_c1-pad1_ gnd 0.01u
+v1  net-_x1-pad7_ gnd 5v
+x1 net-_r2-pad1_ net-_c1-pad1_ net-_r3-pad1_ gnd net-_r2-pad2_ net-_r1-pad2_ net-_x1-pad7_ ? lm_741
+r2  net-_r2-pad1_ net-_r2-pad2_ 1k
+* Control Statements
+
+.ends astable_multivibrator

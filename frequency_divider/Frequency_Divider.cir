@@ -1,0 +1,16 @@
+* C:\Users\Vatsal\eSim-Workspace\Frequency_Divider\Frequency_Divider.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 03/05/22 22:22:30
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U2  CLK Net-_U1-Pad1_ adc_bridge_1		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ counter		
+U3  Net-_U1-Pad2_ OUT dac_bridge_1		
+U4  CLK plot_v1		
+X1  CLK astable_multivibrator		
+U5  OUT plot_v1		
+
+.end

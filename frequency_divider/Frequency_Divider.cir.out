@@ -1,0 +1,29 @@
+* c:\users\vatsal\esim-workspace\frequency_divider\frequency_divider.cir
+
+.include astable_multivibrator.sub
+* u2  clk net-_u1-pad1_ adc_bridge_1
+* u1  net-_u1-pad1_ net-_u1-pad2_ counter
+* u3  net-_u1-pad2_ out dac_bridge_1
+* u4  clk plot_v1
+x1 clk astable_multivibrator
+* u5  out plot_v1
+a1 [clk ] [net-_u1-pad1_ ] u2
+a2 [net-_u1-pad1_ ] [net-_u1-pad2_ ] u1
+a3 [net-_u1-pad2_ ] [out ] u3
+* Schematic Name:                             adc_bridge_1, NgSpice Name: adc_bridge
+.model u2 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             counter, NgSpice Name: counter
+.model u1 counter(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u3 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 1e-06 50e-03 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(clk)
+plot v(out)
+.endc
+.end
