@@ -43,7 +43,7 @@ The Astable Multivibrator is also called a free-running multivibrator. It has tw
 <img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
 
 ### MOD-4 Counter
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/counter_symbol.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/MOD-4%20Counter.png)
 
 A Divide-By-4 counter is a binary divider composed of two D flip flops where an inverted output terminal is connected back to the data terminal in a feedback loop. It is an asynchronous counter, where the first flip-flop is clocked by the external clock pulse and then each successive flip-flop is clocked by the output of the preceding flip-flop. As the signal moves in a ripple pattern, it takes some time at each stage resulting in the lower frequency at the output.
 
@@ -97,7 +97,7 @@ module counter(CLK, COUNT);
 endmodule 
 ```
 
-### T Flip Flop
+### D Flip Flop
 ```
 module FF(CLK, Q, QBAR); 
  
