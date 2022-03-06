@@ -51,7 +51,7 @@ However, because the open-loop op-amp comparator is very sensitive to the voltag
 
 The op-amp comparator circuit is configured as a Schmitt trigger that uses positive feedback of resistors R3 and R4 to generate hysteresis. As the two resistors are configured across the op-amp's output as a voltage divider network, the reference voltage, Vref will be dependent upon the fraction of output voltage fed back to the non-inverting input. This feedback fraction, β is given as:
 
-![image](equations)
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/Equation%201.png" width=400 height=400>
 	
 Where +V(sat) is the positive op-amp DC saturation voltage and -V(sat) is the negative op-amp DC saturation voltage.
 
@@ -70,7 +70,9 @@ But the capacitor, which was charging towards the positive supply rail (+V(sat))
 Once the op-amps inverting terminal reaches the new negative reference voltage, -Vref at the non-inverting terminal, the op-amp once again changes state and the output is driven to the opposing supply rail voltage, +V(sat). The capacitor now has a positive voltage across its plates, and the charging cycle begins again. Thus, the capacitor is constantly charging and discharging creating an astable op-amp multivibrator output.
 
 The period of the output waveform is determined by the RC time constant of the two-timing components and the feedback ratio established by the R3, R4 voltage divider network, which sets the reference voltage level. If the positive and negative values of the amplifiers saturation voltage have the same magnitude, then t1 = t2 and the expression to give the period of oscillation becomes:
-
+	
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/Equation%202.png" width=400 height=200>
+	
 Here: R is Resistance, C is Capacitance, ln( ) is the Natural Logarithm of the feedback fraction, T is periodic time in seconds, and ƒ is oscillation Frequency in Hz.
 
 Then we can see from the above equation that the frequency of oscillation for an Op-amp Multivibrator circuit not only depends upon the RC time constant but also upon the feedback fraction.
