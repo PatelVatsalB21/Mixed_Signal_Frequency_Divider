@@ -30,6 +30,17 @@
 
 
 ## Circuit Details
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/frequency_divider.jpg)
+
+### Astable Multivibrator
+
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator.jpg)
+
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
+
+# MOD-4 Counter
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/counter_symbol.png)
+
 
 ## Software Used
 ### eSim
