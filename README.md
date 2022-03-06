@@ -6,6 +6,8 @@ This repository presents the design of Frequency Divider Using Astable Multivibr
 - [Reference Circuit Diagram](#reference-circuit-diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
+  * [Astable Multivibrator](#astable-multivibrator)
+  * [MOD-4 Counter](#mod-4-counter)
 - [Software Used](#software-used)
   * [eSim](#esim)
   * [NgSpice](#ngspice)
@@ -37,7 +39,7 @@ The Frequency Divider is made up of an astable multivibrator and a divide-by-4 c
 ## Circuit Details
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/frequency_divider.jpg)
 
-### Astable Multivibrator
+## Astable Multivibrator
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator.jpg)
 
 The Astable Multivibrator is also called a free-running multivibrator. It has two quasi-stable states and no external signal is required to produce the changes in state. The component values are used to decide the time for which circuit remains in each state. Usually, as the astable multivibrator oscillates between two states, is used to produce a square wave. In this circuit, the time period is dependent upon the value of the resistor and capacitor. It also depends upon the upper and lower threshold voltage of the op-amp.
@@ -84,7 +86,7 @@ Then we can see from the above equation that the frequency of oscillation for an
 #### Astable Multivibrator Symbol
 <img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
 
-### MOD-4 Counter
+## MOD-4 Counter
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/MOD-4%20Counter.png)
 
 A Divide-By-4 counter is a binary divider composed of two D flip flops where an inverted output terminal is connected back to the data terminal in a feedback loop. It is an asynchronous counter, where the first flip-flop is clocked by the external clock pulse and then each successive flip-flop is clocked by the output of the preceding flip-flop. As the signal moves in a ripple pattern, it takes some time at each stage resulting in the lower frequency at the output.
