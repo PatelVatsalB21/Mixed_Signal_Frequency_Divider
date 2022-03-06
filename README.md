@@ -39,6 +39,43 @@ The Frequency Divider is made up of an astable multivibrator and a divide-by-4 c
 
 The Astable Multivibrator is also called a free-running multivibrator. It has two quasi-stable states and no external signal is required to produce the changes in state. The component values are used to decide the time for which circuit remains in each state. Usually, as the astable multivibrator oscillates between two states, is used to produce a square wave. In this circuit, the time period is dependent upon the value of the resistor and capacitor. It also depends upon the upper and lower threshold voltage of the op-amp.
 
+<details>
+	<summary><h4> Working in Detail </h4></summary>
+    <br>
+
+In the op-amp multivibrator circuit, the op-amp works as an analogue comparator. An op-amp comparator compares the voltages on its two inputs and gives a positive or negative output depending on whether the input is greater or less than some reference value, VREF.
+
+However, because the open-loop op-amp comparator is very sensitive to the voltage changes on its inputs, the output can switch uncontrollably between its positive, +V(sat) and negative, -V(sat) supply rails whenever the input voltage being measured is near to the reference voltage, VREF.
+	
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator%20highlighted.jpg)
+
+The op-amp comparator circuit is configured as a Schmitt trigger that uses positive feedback of resistors R3 and R4 to generate hysteresis. As the two resistors are configured across the op-amp's output as a voltage divider network, the reference voltage, Vref will be dependent upon the fraction of output voltage fed back to the non-inverting input. This feedback fraction, β is given as:
+
+![image](equations)
+	
+Where +V(sat) is the positive op-amp DC saturation voltage and -V(sat) is the negative op-amp DC saturation voltage.
+
+Then we can see that,
++Vref = +V(sat)β
+-Vref = -V(sat)β
+	
+Let's assume that the capacitor is fully discharged and the output of the op-amp is saturated at the positive supply rail. The capacitor, C starts to charge up from the output voltage, Vout through a resistor, R at a rate determined by their RC time constant.
+
+The capacitor wants to charge up to the value of Vout within five-time constants. However, as soon as the capacitor's charging voltage at the op-amp's inverting (-) terminal is equal to or greater than the voltage at the non-inverting terminal, the output will change state and be driven to the opposing negative supply rail.
+
+But the capacitor, which was charging towards the positive supply rail (+V(sat)), now has a negative voltage, -V(sat) across its plates. This sudden reversal of the output voltage causes the capacitor to discharge toward the new value of Vout at a rate of the RC time constant.
+
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/Multivibrator%20Voltage%20Graph.png)
+
+Once the op-amps inverting terminal reaches the new negative reference voltage, -Vref at the non-inverting terminal, the op-amp once again changes state and the output is driven to the opposing supply rail voltage, +V(sat). The capacitor now has a positive voltage across its plates, and the charging cycle begins again. Thus, the capacitor is constantly charging and discharging creating an astable op-amp multivibrator output.
+
+The period of the output waveform is determined by the RC time constant of the two-timing components and the feedback ratio established by the R3, R4 voltage divider network, which sets the reference voltage level. If the positive and negative values of the amplifiers saturation voltage have the same magnitude, then t1 = t2 and the expression to give the period of oscillation becomes:
+
+Here: R is Resistance, C is Capacitance, ln( ) is the Natural Logarithm of the feedback fraction, T is periodic time in seconds, and ƒ is oscillation Frequency in Hz.
+
+Then we can see from the above equation that the frequency of oscillation for an Op-amp Multivibrator circuit not only depends upon the RC time constant but also upon the feedback fraction.
+</details>
+
 #### Astable Multivibrator Symbol
 <img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
 
