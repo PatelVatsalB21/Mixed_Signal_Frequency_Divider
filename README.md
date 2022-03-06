@@ -247,8 +247,12 @@ endmodule
   - Open eeSchema</br>
 
 ## Acknowlegdements
-1. FOSSEE, IIT Bombay
-2. Steve Hoover, Founder, Redwood EDA
-3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-4. Sumanto Kar, eSim Team, FOSSEE
+- FOSSEE, IIT Bombay
+- Steve Hoover, Founder, Redwood EDA
+- Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+- Sumanto Kar, eSim Team, FOSSEE
+
+## References
+- [Op-amp Astable Multivibrator](https://www.electronics-tutorials.ws/opamp/op-amp-multivibrator.html)
+- [Frequency Division Using Flip Flops](https://www.electronics-tutorials.ws/counter/count_1.html#:~:text=The%20final%20output%20clock%20signal,the%20way%20they%20are%20clocked.)
 
