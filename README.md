@@ -48,3 +48,82 @@ It is an Online Web Browser IDE for Verilog/System-verilog/TL-Verilog Simulation
 ### Verilator
 It is a tool which converts Verilog code to C++ objects. Refer:
 https://www.veripool.org/verilator/
+
+## Circuit Diagram in eSim
+The following is the schematic in eSim:
+![image]()
+
+## Verilog Code
+
+### Counter
+```
+`include "ff.v"
+module counter(CLK, COUNT); 
+ 	
+	input CLK; 
+	output COUNT; 
+	 
+	reg CLK; 
+	reg COUNT;
+
+	wire C1; 
+	wire Q1; 
+	wire Q2; 
+	 
+	FF TFF1(.CLK(CLK), .Q(Q1), .QBAR(C1)); 
+	FF TFF2(.CLK(C1), .Q(), .QBAR(Q2)); 
+	 
+	assign COUNT = Q2; 
+ 
+endmodule 
+```
+
+### T Flip Flop
+```
+module FF(CLK, Q, QBAR); 
+ 
+	input CLK; 
+ 
+	output QBAR; 
+	output Q; 
+ 
+	wire CLK; 
+	wire Q; 
+	wire QBAR; 
+	 
+	reg state; 
+	 
+	always @(posedge CLK) 
+	begin 
+		begin 
+			state <= ~state; 
+		end 
+	end 
+	 
+	assign QBAR = ~state; 
+	assign Q = state; 
+ 
+endmodule 
+```
+
+### Testbench
+```
+`include "counter.v"
+module tb; 
+ 
+	reg CLK; 
+	reg COUNT; 
+   
+	always 
+	begin 
+      
+		CLK = 0; 
+		#2.5; 
+     
+		CLK = 1; 
+      		#2.5; 
+	end 
+endmodule
+```
+
+
