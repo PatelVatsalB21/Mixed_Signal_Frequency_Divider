@@ -214,8 +214,11 @@ endmodule
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/netlist.jpg)
 
 ## NgSpice Plots
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2010ms.jpg)
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2010ms.jpg)
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2050ms.jpg)
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2050ms.jpg)
+### Simulation for 10ms
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2010ms%20new.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2010ms%20new.jpg)
+
+### Simulation for 50ms
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2050ms%20new.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2050ms%20new.jpg)
 
