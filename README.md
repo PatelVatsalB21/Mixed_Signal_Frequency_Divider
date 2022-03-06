@@ -19,3 +19,11 @@
 - [Steps to run this project](#steps-to-run-this-project)
 - [Acknowlegdements](#acknowlegdements)
 - [References](#references)
+
+## Abstract
+
+
+## Reference Circuit Diagram
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Reference%20images/Frequency%20Divider%20Schematic.png)
+## Reference Waveform
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Reference%20images/Frequency%20Divider%20Waveform.png)
