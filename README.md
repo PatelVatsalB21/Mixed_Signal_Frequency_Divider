@@ -200,3 +200,11 @@ module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, outpu
    counter counter1(.CLK(clk), .COUNT(COUNT));
 endmodule
 ```
+
+## Makerchip Plots
+### Counter Signals
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20Signals.png)
+### Counter Signals Close-Up
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20Signals%20Zoom.png)
+### All Signals
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20All%20Signals.png)
