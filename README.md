@@ -222,3 +222,13 @@ endmodule
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2050ms%20new.jpg)
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2050ms%20new.jpg)
 
+## Steps to run generate NgVeri Model
+1. Open eSim
+2. Run NgVeri-Makerchip 
+3. Add top level verilog file in Makerchip Tab
+4. Click on NgVeri tab
+5. Add dependency files
+6. Click on Run Verilog to NgSpice Converter
+7. Debug if any errors
+8. Model created successfully
+
