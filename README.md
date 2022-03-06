@@ -232,3 +232,19 @@ endmodule
 7. Debug if any errors
 8. Model created successfully
 
+## Steps to run this project
+1. Open a new terminal
+2. Clone this project using the following command:</br>
+```git clone https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider.git ```</br>
+3. Change directory:</br>
+```cd frequency_divider```</br>
+4. Run ngspice:</br>
+```ngspice Frequency_Divider.cir.out```</br>
+5. To run the project in eSim:
+
+  - Run eSim</br>
+  - Load the project</br>
+  - Open eeSchema</br>
+
+
+
