@@ -284,11 +284,15 @@ endmodule
 ### Signals Combined
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/Signals%20Combined.jpg)
 ### Simulation for 10ms
+#### CLK Signal
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/CLK%20Signal%2010ms%20new.jpg)
+#### OUTPUT Signal
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/OUT%20Signal%2010ms%20new.jpg)
 
 ### Simulation for 50ms
+#### CLK Signal
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/CLK%20Signal%2050ms%20new.jpg)
+#### OUTPUT Signal
 ![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/OUT%20Signal%2050ms%20new.jpg)
 
 ## Observations
