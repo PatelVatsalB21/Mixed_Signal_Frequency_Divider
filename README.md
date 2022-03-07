@@ -15,7 +15,7 @@ This repository presents the design of Frequency Divider Using Astable Multivibr
   * [Verilator](#verilator)
 - [Circuit Diagram in eSim](#circuit-diagram-in-esim)
 - [Verilog Code](#verilog-code)
-- [Makerchip](#makerchip-1)
+- [Makerchip Code](#makerchip-code)
 - [Makerchip Plots](#makerchip-plots)
 - [Netlist](#netlist)
 - [NgSpice Plots](#ngspice-plots)
@@ -191,7 +191,7 @@ module tb;
 endmodule
 ```
 
-## Makerchip
+## Makerchip Code
 ```
 \TLV_version 1d: tl-x.org
 \SV
