@@ -31,16 +31,16 @@ Frequency Divider is an electronic circuit that divides a given frequency by a f
 The Frequency Divider is made up of an astable multivibrator and a divide-by-4 counter. The astable multivibrator generates a clock signal of a specific frequency which is used as an input in the counter. Then the counter produces an output signal of a divide-by-4 frequency.
 
 ## Reference Circuit Diagram
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Reference%20images/Frequency%20Divider%20Schematic.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Reference%20images/Frequency%20Divider%20Schematic.png)
 ## Reference Waveform
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Reference%20images/Frequency%20Divider%20Waveform.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Reference%20images/Frequency%20Divider%20Waveform.png)
 
 
 ## Circuit Details
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/frequency_divider.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/frequency_divider.jpg)
 
 ## Astable Multivibrator
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/astable_multivibrator.jpg)
 
 The Astable Multivibrator is also called a free-running multivibrator. It has two quasi-stable states and no external signal is required to produce the changes in state. The component values are used to decide the time for which circuit remains in each state. Usually, as the astable multivibrator oscillates between two states, is used to produce a square wave. In this circuit, the time period is dependent upon the value of the resistor and capacitor. It also depends upon the upper and lower threshold voltage of the op-amp.
 
@@ -52,11 +52,11 @@ In the op-amp multivibrator circuit, the op-amp works as an analogue comparator.
 
 However, because the open-loop op-amp comparator is very sensitive to the voltage changes on its inputs, the output can switch uncontrollably between its positive, +V(sat) and negative, -V(sat) supply rails whenever the input voltage being measured is near to the reference voltage, VREF.
 	
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator%20highlighted.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/astable_multivibrator%20highlighted.jpg)
 
 The op-amp comparator circuit is configured as a Schmitt trigger that uses positive feedback of resistors R3 and R4 to generate hysteresis. As the two resistors are configured across the op-amp's output as a voltage divider network, the reference voltage, Vref will be dependent upon the fraction of output voltage fed back to the non-inverting input. This feedback fraction, β is given as:
 
-<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/Equation%201.png" width=400 height=400>
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/Equation%201.png" width=400 height=400>
 	
 Where +V(sat) is the positive op-amp DC saturation voltage and -V(sat) is the negative op-amp DC saturation voltage.
 
@@ -70,13 +70,13 @@ The capacitor wants to charge up to the value of Vout within five-time constants
 
 But the capacitor, which was charging towards the positive supply rail (+V(sat)), now has a negative voltage, -V(sat) across its plates. This sudden reversal of the output voltage causes the capacitor to discharge toward the new value of Vout at a rate of the RC time constant.
 
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/Multivibrator%20Voltage%20Graph.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/Multivibrator%20Voltage%20Graph.png)
 
 Once the op-amps inverting terminal reaches the new negative reference voltage, -Vref at the non-inverting terminal, the op-amp once again changes state and the output is driven to the opposing supply rail voltage, +V(sat). The capacitor now has a positive voltage across its plates, and the charging cycle begins again. Thus, the capacitor is constantly charging and discharging creating an astable op-amp multivibrator output.
 
 The period of the output waveform is determined by the RC time constant of the two-timing components and the feedback ratio established by the R3, R4 voltage divider network, which sets the reference voltage level. If the positive and negative values of the amplifiers saturation voltage have the same magnitude, then t1 = t2 and the expression to give the period of oscillation becomes:
 	
-<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/Equation%202.png" width=400 height=200>
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/Equation%202.png" width=400 height=200>
 	
 Here: R is Resistance, C is Capacitance, ln( ) is the Natural Logarithm of the feedback fraction, T is periodic time in seconds, and ƒ is oscillation Frequency in Hz.
 
@@ -84,15 +84,15 @@ Then we can see from the above equation that the frequency of oscillation for an
 </details>
 
 #### Astable Multivibrator Symbol
-<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/astable_multivibrator_symbol.png" width=400 height=200>
 
 ## MOD-4 Counter
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/MOD-4%20Counter.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/MOD-4%20Counter.png)
 
 A Divide-By-4 counter is a binary divider composed of two D flip flops where an inverted output terminal is connected back to the data terminal in a feedback loop. It is an asynchronous counter, where the first flip-flop is clocked by the external clock pulse and then each successive flip-flop is clocked by the output of the preceding flip-flop. As the signal moves in a ripple pattern, it takes some time at each stage resulting in the lower frequency at the output.
 
 #### MOD-4 Counter Symbol
-<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/counter_symbol.png" width=500 height=300>
+<img src="https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/counter_symbol.png" width=500 height=300>
 
 ## Software Used
 ### eSim
@@ -270,24 +270,24 @@ endmodule
 
 ## Makerchip Plots
 ### Counter Signals
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20Signals.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/Makerchip%20Signals.png)
 ### Counter Signals Close-Up
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20Signals%20Zoom.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/Makerchip%20Signals%20Zoom.png)
 ### All Signals
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/Makerchip%20All%20Signals.png)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/Makerchip%20All%20Signals.png)
 
 
 ## Netlist
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Circuit%20images/netlist.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Circuit%20images/netlist.jpg)
 
 ## NgSpice Plots
 ### Simulation for 10ms
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2010ms%20new.jpg)
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2010ms%20new.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/CLK%20Signal%2010ms%20new.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/OUT%20Signal%2010ms%20new.jpg)
 
 ### Simulation for 50ms
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/CLK%20Signal%2050ms%20new.jpg)
-![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Results/OUT%20Signal%2050ms%20new.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/CLK%20Signal%2050ms%20new.jpg)
+![image](https://github.com/PatelVatsalB21/Mixed_Signal_Frequency_Divider/blob/main/Documentation/Results/OUT%20Signal%2050ms%20new.jpg)
 
 ## Observations
 - Operating Voltage of the circuit is **5V**
